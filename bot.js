@@ -25,9 +25,9 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Xave`, { type: "WATCHING" });
+  client.user.setActivity(`Rolly Hazır Altyapı`, { type: "PLAYING" });
 
-  console.log("CodeWork Akıyor!!");
+  console.log("Rolly Code #AFFETMEZ!!");
 });
 
 const log = message => {
@@ -120,3 +120,5 @@ client.elevation = message => {
 client.login(process.env.TOKEN);
 
 //-----------------------KOMUTLAR-----------------------\\
+//token .env
+//ready.js mainde :)

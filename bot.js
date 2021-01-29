@@ -122,3 +122,56 @@ client.login(process.env.TOKEN);
 //-----------------------KOMUTLAR-----------------------\\
 //token .env
 //ready.js mainde :)
+
+
+//botu sese sokma
+client.on("ready", async function() {
+const voiceChannel = "kanal id"
+client.channels.cache.get(voiceChannel).join()
+.catch(err => {
+throw err;
+})
+})
+
+//sa as
+client.on("message", async message => {
+  let a = await db.fetch(`saas_${message.guild.id}`)
+  if (a) {
+      if (message.content.toLowerCase() === "sa") {
+        message.channel.send(
+new Discord.MessageEmbed()
+          .setDescription(`Aleyküm Selam Hoşgeldin!`)
+)
+      }
+  }
+  
+  
+})
+
+//ROL KORuma
+client.on("roleDelete", async role => {
+  let rolko = await db.fetch(`rolk_${role.guild.id}`);
+  if (rolko) { 
+         const entry = await role.guild.fetchAuditLogs({ type: "ROLE_DELETE" }).then(audit => audit.entries.first());
+    if (entry.executor.id == client.user.id) return;
+  role.guild.roles.create({ data: {
+          name: role.name,
+          color: role.color,
+          hoist: role.hoist,
+          permissions: role.permissions,
+          mentionable: role.mentionable,
+          position: role.position
+}, reason: 'Silinen Roller Tekrar Açıldı.'})
+  }
+})
+
+//
+
+client.on("roleCreate", async role => {
+  let rolk = await db.fetch(`rolk_${role.guild.id}`);
+  if (rolk) { 
+       const entry = await role.guild.fetchAuditLogs({ type: "ROLE_CREATE" }).then(audit => audit.entries.first());
+    if (entry.executor.id == client.user.id) return;
+  role.delete()
+}
+})

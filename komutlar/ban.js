@@ -33,4 +33,4 @@ exports.conf = {
 exports.help = {
   name: 'ban'
 }; 
-//ALINTIDIR
+//PİNK CODEDEN ALINMIŞTIR!

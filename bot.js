@@ -25,7 +25,7 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
 
-  client.user.setActivity(`Rolly Hazır Altyapı`, { type: "PLAYING" });
+  client.user.setActivity(`Rolly Hazır Moderasyon Altyapısı`, { type: "PLAYING" });
 
   console.log("Rolly Code #AFFETMEZ!!");
 });

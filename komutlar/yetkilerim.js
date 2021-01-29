@@ -72,7 +72,7 @@ ${x8} Mesajları Yönet
 ${x9} Kullanıcı Adlarını Yönet
 ${x10} Emojileri Yönet
 ${x11} Webhook'ları Yönet**`)
-  msg.channel.send("**Başında \"-\" olanlar o yetkiye sahip olunmadığını gösterir.Başında \"+\" olanlar o yetkiye sahip olunduğunu gösterir. \n```")
+  msg.channel.send("**Başında \"-\" olanlar o yetkiye sahip olunmadığını gösterir, Başında \"+\" olanlar o yetkiye sahip olunduğunu gösterir.**")
   
 };
 

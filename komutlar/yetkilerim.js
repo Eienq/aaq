@@ -61,27 +61,26 @@ let x;
     if (!msg.member.hasPermission("MANAGE_WEBHOOKS")) x11 = "-"
     
     msg.channel.send(stripIndents`
-**${x} Yönetici
-${x2} Denetim Kaydını Görüntüle
-${x3} Sunucuyu Yönet
-${x4} Rolleri Yönet
-${x5} Kanalları Yönet
-${x6} Üyeleri At
-${x7} Üyeleri Yasakla
-${x8} Mesajları Yönet
-${x9} Kullanıcı Adlarını Yönet
-${x10} Emojileri Yönet
-${x11} Webhook'ları Yönet**`)
-  msg.channel.send("**Başında \"-\" olanlar o yetkiye sahip olunmadığını gösterir, Başında \"+\" olanlar o yetkiye sahip olunduğunu gösterir.**")
+**Yönetici ${x}
+Denetim Kaydını Görüntüle ${x2}
+Sunucuyu Yönet ${x3}
+Rolleri Yönet ${x4}
+Kanalları Yönet ${x5}
+Üyeleri At ${x6}
+Üyeleri Yasakla ${x7}
+Mesajları Yönet ${x8}
+Kullanıcı Adlarını Yönet ${x9}
+Emojileri Yönet ${x10} 
+Webhook'ları Yönet ${x11}**`)
+  msg.channel.send("**\`Başında \"-\" olanlar o yetkiye sahip olunmadığını gösterir, Başında \"+\" olanlar o yetkiye sahip olunduğunu gösterir.\`**")
   
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['izinlerim'],
+  aliases: [],
   permLevel: 0,
-    kategori: "kullanıcı"
 };
 
 exports.help = {

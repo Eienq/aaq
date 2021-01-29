@@ -123,16 +123,6 @@ client.login(process.env.TOKEN);
 //token .env
 //ready.js mainde :)
 
-
-//botu sese sokma
-client.on("ready", async function() {
-const voiceChannel = "kanal id"
-client.channels.cache.get(voiceChannel).join()
-.catch(err => {
-throw err;
-})
-})
-
 //sa as
 client.on("message", async message => {
   let a = await db.fetch(`saas_${message.guild.id}`)

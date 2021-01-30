@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 exports.run = async(client, message, args ) => {
   
+if(!message.member.permissions.has('KİCK_MEMBERS')) return message.channel.send('Bu komutu kullanabilmek için `Üyeleri Engelle` yetkisine sahip olmalısın')
 let banlanıcak = message.mentions.users.first()
 let banlimit = await db.fetch(`banlimit_${message.guild.id}`)
  let bansayı= await db.fetch(`bansayı_${message.author.id}`)

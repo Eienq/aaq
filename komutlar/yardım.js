@@ -11,7 +11,9 @@ const yardım = new Discord.MessageEmbed()
 \`r!rol-koruma\` : **Rol Koruma Aç/Kapat**
 \`r!küfür-engel\`:  **Küfür Engel Aç/Kapat**
 \`r!reklam-engel\` :  **Reklam Engel Aç/Kapat**
-\`r!ban\`: **Ban Ayarlama Menüsünü Gösterir**
+\`r!ban\`: **Etiketlediginiz Kişiyi Sunucudan Atar**
+\`r!ban-log\`: **Ban Log Kanalını Ayarlar**
+\`r!ban-limit\`: **Banlama Yetkisine Sahip Kişiler Limitden Fazla Kişi Banlayamazlar**
 \`r!unban\`:  **Belirttiğiniz Kişinin Banını Kaldırırsınız**
 \`r!sil\`:  **Belirttiğiniz Sayıda Mesajı Siler**
 \`r!ping\`:  **Pinginizi Ölçüp Atar**

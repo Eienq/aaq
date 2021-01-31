@@ -198,3 +198,19 @@ if (newMsg.member.hasPermission("BAN_MEMBERS")) return; newMsg.delete()
 oldMsg.reply('Reklamları engelliyorum!').then(msg => msg.delete(7000)) 
 }
 });
+//KANAL KORUMA
+client.on("channelCreate", async (channel, member, guild) => {
+  let kanal = await db.fetch(`kanalk_${channel.guild.id}`);
+  if (kanal == "acik") {
+    channel.delete();
+    const embed = new Discord.RichEmbed()
+      .setDescription(
+        "Sunucunuzda yeni bir kanal oluşturuludu! fakat geri silindi! ( Kanal Koruma Sistemi) "
+      )
+      .setColor("BLACK");
+    channel.guild.owner.send(embed);
+    return;
+  } else {
+    return;
+  }
+});

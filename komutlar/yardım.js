@@ -17,7 +17,13 @@ const yardım = new Discord.MessageEmbed()
 \`r!unban\`:  **Belirttiğiniz Kişinin Banını Kaldırırsınız**
 \`r!sil\`:  **Belirttiğiniz Sayıda Mesajı Siler**
 \`r!ping\`:  **Pinginizi Ölçüp Atar**
-\`r!avatar\`:  **Avatarınızı Atar**`)
+\`r!avatar\`:  **Avatarınızı Atar**
+\`r!yapımcım\`:  **Botun Sahibini Gösterir**
+\`r!herkeserolver\`:  **Herkese Belirlediginiz Rolü Verir**
+\`r!herkestenrolal\`:  **Herkesden Rol Alır**
+\`r!sa-as\`:  **Sa-As Sistemini Açarsınız**
+\`r!yetkilerim\`:  **Yetkilerinizi Gösterir**
+`)
 .setImage("")
 .setThumbnail(message.author.avatarURL())
 message.channel.send(yardım)

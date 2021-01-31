@@ -198,19 +198,21 @@ if (newMsg.member.hasPermission("BAN_MEMBERS")) return; newMsg.delete()
 oldMsg.reply('Reklamları engelliyorum!').then(msg => msg.delete(7000)) 
 }
 });
-//KANAL KORUMA
-client.on("channelCreate", async (channel, member, guild) => {
-  let kanal = await db.fetch(`kanalk_${channel.guild.id}`);
-  if (kanal == "acik") {
-    channel.delete();
-    const embed = new Discord.RichEmbed()
-      .setDescription(
-        "Sunucunuzda yeni bir kanal oluşturuludu! fakat geri silindi! ( Kanal Koruma Sistemi) "
-      )
-      .setColor("BLACK");
-    channel.guild.owner.send(embed);
-    return;
-  } else {
-    return;
-  }
-});
+/////////////////////////////////////////////////kanal-koruma
+//KanalKoruma
+
+client.on("channelDelete", async function(channel) {
+    let rol = await db.fetch(`kanalk_${channel.guild.id}`);
+  
+  if (rol) {
+const guild = channel.guild.cache;
+let channelp = channel.parentID;
+
+  channel.clone().then(z => {
+    let kanal = z.guild.channels.find(c => c.name === z.name);
+    kanal.setParent(
+      kanal.guild.channels.find(channel => channel.id === channelp)
+      
+    );
+  });
+}

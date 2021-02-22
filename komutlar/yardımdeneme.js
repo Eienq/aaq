@@ -5,7 +5,7 @@ exports.run = function(client, message) {
 let botismi = 'Rolly Bot'
 const yardım = new Discord.MessageEmbed()
 .setColor('#010000')
-.addField('${botismi} Yardım Menüsü')
+.addField(`${botismi} Yardım Menüsü`)
 .setDescription(`
 r!moderasyon : moderasyon komutlarını gösterir
 r!eglence : eglence komutlarını gösterir

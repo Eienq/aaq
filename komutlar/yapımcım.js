@@ -19,4 +19,4 @@ exports.help = {
   name: "yapımcım",
   description: "",
   usage: ""
-};
+};//
